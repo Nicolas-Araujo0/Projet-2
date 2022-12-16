@@ -19,8 +19,9 @@ body {
 
 .entete {
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    height: 8vh;
+    color: rgb(156, 147, 147);
+    height: 100px;
+    width: 100%;
     font-size: 2rem;
     display: flex;
     justify-content: space-around;
@@ -37,7 +38,7 @@ body {
 }
 
 #underline:hover {
-    color: rgb(110, 136, 110);
+    color: rgb(97, 103, 97);
     cursor: pointer;
 }
 
@@ -49,29 +50,42 @@ body {
 #navbar {
     width: 80%;
     margin: 0% 10%;
+    margin-bottom: -67px;
     padding: 1rem;
-    background-color: rgb(105, 105, 105);
+    height: 2rem;
+    color: rgba(159, 221, 51, 0.862);
+    background-color: rgba(0, 0, 0, 0.848);
+    border: 1px solid;
+    border-radius: 200px 200px 200px 200px;
     display: flex;
     align-items: center;
     position: relative;
     flex-direction: row;
     justify-content: space-evenly;
+    z-index: 1;
+}
+
+#navbar a:hover {
+    background-color: rgba(162, 159, 141, 0.944);
+    border: 2px solid rgb(238, 218, 222);
+    transition: .3s;
+    border-radius: 5px;
 }
 
 /*button,*/
 .nav a {
-    color: wheat;
+    color: rgba(201, 197, 187, 0.75);
     font-size: 1.5rem;
 }
 
 div.content a:hover {
-    color: orange;
+    color: rgb(192, 185, 174);
 }
 
 #navbar button {
     background-color: transparent;
     border: none;
-    outline: none;    
+    outline: none;
 }
 
 #navbar .dropdown-1 {
@@ -89,10 +103,12 @@ div.content a:hover {
     display: flex;
     flex-direction: column;
     position: absolute;
+    justify-content: center;
     background-color: rgb(255, 255, 255);
     opacity: .9;
     top: 30px;
     width: 80%;
+    height: 120px;
     padding: 12px 14px;
     box-sizing: border-box;
     border: 1px solid;
@@ -106,7 +122,7 @@ div.content a:hover {
 }
 
 #navbar .content a:hover {
-    color: orange
+    color: rgb(243, 241, 237)
 }
 
 #navbar .icon {
@@ -116,12 +132,20 @@ div.content a:hover {
 
 a:hover,
 button:hover {
-    color: red;
+    color: rgb(217, 185, 185);
     transition: .2s;
 }
 
-#navbar a{
+#navbar a {
     text-decoration: none;
+}
+
+nav div img:hover {
+    width: 40px;
+    background-color: ghostwhite;
+    border: 3px solid pink;
+    border-radius: 25px;
+    transition: .4s;
 }
 
 /*************************
@@ -131,7 +155,7 @@ button:hover {
 .slider {
     width: 100%;
     overflow: hidden;
-    max-height: 600px;
+    max-height: 1000px;
 }
 
 .slides {
@@ -193,6 +217,7 @@ ul li {
     text-align: center;
     padding: 5rem;
     color: bisque;
+    margin: 0% 10%;
 }
 
 .logo {
@@ -209,7 +234,7 @@ ul li {
 }
 
 .logo img:hover {
-    height: 75px;
+    width: 60px;
     background-color: ghostwhite;
     border: 5px solid pink;
     transition: .3s;
@@ -240,22 +265,31 @@ ul li {
     align-self: center;
     text-align: center;
     border: 5px solid;
+    border-radius: 5px;
 }
 
 
 .marque {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0%;
     background-image: url(/Image/R2.jpg);
     background-size: 100vw;
     height: 50vw;
+}
+
+
+.marque div img {
+    position: absolute;
+    top: 30%;
+    left: 10%;
 }
 
 .text-center {
     text-align: center;
     color: rgb(248, 248, 248);
     width: 30%;
-    padding: 10rem;
+    padding: 10% 0%;
 }
 
 /* vehicule slider */
@@ -308,7 +342,7 @@ ul li {
     }
 }
 
-/* */
+/*****************************************************************************************************************************************Membership*******************************************************************************************************************************************************/
 
 .background-member {
     display: flex;
@@ -319,18 +353,27 @@ ul li {
     padding: 5% 0%;
 }
 
+.text-cube h3,
+p {
+    padding: 0px 10%;
+}
 
 .text-cube {
+    display: flex;
+    flex-direction: column;
     border: 1px solid;
     width: 45%;
-    background-color: rgb(220, 220, 90);
+    color: rgba(159, 221, 51, 0.862);
+    background-color: rgba(219, 219, 201, 0.388);
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    max-height: 60vh;
-    min-height: 30vh;
+    max-height: max-content;
+    min-height: 10vw;
 }
 
 /******************************
-*************FORM**************
+************* FORMULAIRE **************
 ******************************/
 
 
@@ -394,27 +437,73 @@ input[type=submit] {
 
 footer {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    padding: 5rem;
     color: bisque;
+    margin: 5% 10%;
+    justify-content: space-evenly;
+}
+
+footer div {
+    width: 60%;
+}
+
+footer div h3 {
+    text-align: center;
 }
 
 footer a {
     color: bisque;
 }
 
-nav div img:hover {
-    height: 50px;
+#micke {
+    background-image: url(/Image/61tDl0sC3eL._AC_SX355_.jpg);
 }
 
 
+
 /*********************
-******** MEDIA *******
+******** MEDIA VEHICUL *******
 *********************/
 
+@media (max-width:1500px) {
+    .background-member {
+        margin: 3% 5%;
+    }
+}
+
+@media (max-width:1200px) {
+    .marque div img {
+        position: relative;
+        width: 100%;
+        height: 20%;
+        top: 25%;
+        left: 10%;
+    }
+}
+@media (max-width:1000px) {
+    .background-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 0%;
+    }
+
+    .text-cube {
+        width: 80%;
+        min-height: 20vw;
+    }
+
+    .text-cube iframe {
+        height: 20rem;
+
+    }
+}
 @media (max-width: 900px) {
+
+    #navbar .dropdown-1:hover .content {
+        width: 100px;
+        height: 80px;
+        padding: 12px 14px;
+    }
 
     .img-block {
         display: flex;
@@ -422,6 +511,7 @@ nav div img:hover {
         row-gap: 2rem;
         margin-top: 2rem;
     }
+
     .img-left {
         display: flex;
         flex-direction: column-reverse;
@@ -442,14 +532,24 @@ nav div img:hover {
         width: 80vw;
     }
 
-    #navbar a{
+    #navbar a {
         font-size: .8rem;
+    }
+
+    .titre {
+        margin: 0%;
+    }
+
+
+}
+
+@media (max-width: 700px){
+    .background-member{
+        margin: 10% 0%;
     }
 }
 
-
-
-/* */
+/*************************************************************************************************************************************MEDIA INDEX******************************************************/
 
 @media (max-width: 1800px) {
     .text-center {
